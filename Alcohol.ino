@@ -17,7 +17,7 @@ void loop() {
   Serial.println(' '); 
   
   if (valor_alcohol > 800) {    
-    digitalWrite(13, HIGH); 
+    tone(13, 1000); 
     digitalWrite(12, HIGH); 
   } else {                                
     if (valor_alcohol > 500) {
@@ -27,11 +27,12 @@ void loop() {
     }
   }
   
-  digitalWrite(13, LOW); 
+  
   delay(400);
   digitalWrite(12, LOW); 
   digitalWrite(11, LOW); 
   digitalWrite(10, LOW); 
+  noTone(13); 
 
   
 }
